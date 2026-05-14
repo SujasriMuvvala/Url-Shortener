@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>URL Shortener</title>
+</head>
+
+<body>
+
+    <h1>URL Shortener System</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="long_url"
+            placeholder="Enter Long URL"
+            required
+        >
+
+        <button type="submit">
+            Shorten URL
+        </button>
+
+    </form>
+
+    {% if short_url %}
+
+        <h3>Short URL:</h3>
+
+        <a href="{{ short_url }}">
+            {{ short_url }}
+        </a>
+
+    {% endif %}
+
+</body>
+
+</html>
